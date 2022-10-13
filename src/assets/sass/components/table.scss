@@ -1,0 +1,50 @@
+.table{
+    width: 100%;
+    thead{
+        tr{
+            background-color: $gray_800;
+            th{
+                text-align: left;
+                color: #FFFFFF;
+                padding: 5px 10px;
+                &+th{
+                    &:last-child{
+                        //text-align: right;
+                        a{
+                            margin: 0 10px;
+                            color: $black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    tbody{
+        tr{
+            &:hover{
+                background-color: $gray_200;
+            }
+            td{
+                border-bottom: 1px dotted $gray_400;
+                //text-align: left;
+                padding: 5px 10px;
+                a{
+                    margin: 0 10px;
+                    color: $black;
+                    text-decoration: none;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+                &:last-child{
+                    width: 10%;
+                    text-align: right;
+                    a{
+                        margin: 0 10px;
+                        color: $black;
+                    }
+                }
+            }
+        }
+    }
+}

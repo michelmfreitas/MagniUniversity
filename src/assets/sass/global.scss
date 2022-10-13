@@ -1,0 +1,123 @@
+//colors
+$red: #ED0D14;
+$red_dark: #b10309;
+$gray_100: rgba(247,247,247, 0.38);
+$gray_200: #f7f7f7;
+$gray_300: #f4f4f4;
+$gray_400: #c6c6c6;
+$gray_800: #707070;
+$gray_900: #333333;
+$black: #222222;
+
+//fonts
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
+
+
+//functions
+@import "./base/mixins";
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  //letter-spacing: 0.5px;
+  color: #333333;
+  line-height: 28px;
+}
+
+body{
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 700;
+  color: $gray_800;
+  span{
+    font-weight: 400;
+  }
+}
+
+body, input, textarea, button{
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+button{
+  cursor: pointer;
+}
+
+p{
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 400;
+  line-height: 28px;
+  font-size: 1rem;
+  letter-spacing: 0;
+  @media(max-width: 768px){
+    font-size: rem(14px);
+    line-height: rem(22px);
+  }
+}
+
+aside{
+  nav{
+    a{
+      border-bottom: 1px dotted $gray_400;
+      color: $gray_900;
+      text-decoration: none;
+      margin: 0 !important;
+      padding: 5px;
+      position: relative;
+      &:hover{
+        background-color: $gray_400;
+        &:after{
+          content: "";
+          background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjRweCIgaGVpZ2h0PSIyNHB4IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMTMuMjIgMTkuMDNhLjc1Ljc1IDAgMDAxLjA2IDBsNi4yNS02LjI1YS43NS43NSAwIDAwMC0xLjA2bC02LjI1LTYuMjVhLjc1Ljc1IDAgMTAtMS4wNiAxLjA2bDQuOTcgNC45N0gzLjc1YS43NS43NSAwIDAwMCAxLjVoMTQuNDRsLTQuOTcgNC45N2EuNzUuNzUgMCAwMDAgMS4wNnoiLz48L3N2Zz4=);
+          position: absolute;
+          top: 8px;
+          right: 5px;
+          background-size: cover;
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+}
+
+.overlayModal{
+  background-color: rgba(0,0,0,0.75);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.btn-container{
+  display: flex;
+  .btn{
+    margin: 0 5px;
+  }
+
+  &.right{
+    justify-content: flex-end;
+  }
+  &.center{
+    justify-content: center;
+  }
+}
+
+
+//components
+@import "./components/buttons";
+@import "./components/table";
+@import "./components/forms";

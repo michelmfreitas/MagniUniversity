@@ -1,0 +1,44 @@
+.input-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+
+    input, select{
+        min-height: 48px;
+        padding: 0 10px;
+        border-radius: 0;
+        border: 2px solid $gray_300;
+        margin: 5px 0;
+        background-color: $gray_900;
+        color: #FFFFFF;
+        &::placeholder{
+            color: $gray_400;
+        }
+    }
+    select[multiple]{
+        min-height: 200px;
+        padding: 10px;
+        border: 1px solid $gray_800;
+        background-color: $gray_200;
+        option{
+            padding: 5px 0;
+            font-size: 1rem;
+            color: $gray_900;
+            border-bottom: 1px dotted $gray_400;
+        }
+    }
+
+    span{
+        color: $red;
+        display: none;
+    }
+
+    &.error{
+        input{
+            color: $red;
+        }
+        span{
+            display: block;
+        }
+    }
+}
