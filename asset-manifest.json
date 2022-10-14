@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/magniuniversity.github.io/static/css/main.335029ef.css",
-    "main.js": "/magniuniversity.github.io/static/js/main.c608e80a.js",
-    "index.html": "/magniuniversity.github.io/index.html",
-    "main.335029ef.css.map": "/magniuniversity.github.io/static/css/main.335029ef.css.map",
-    "main.c608e80a.js.map": "/magniuniversity.github.io/static/js/main.c608e80a.js.map"
+    "main.css": "/static/css/main.335029ef.css",
+    "main.js": "/static/js/main.a320a9c6.js",
+    "index.html": "/index.html",
+    "main.335029ef.css.map": "/static/css/main.335029ef.css.map",
+    "main.a320a9c6.js.map": "/static/js/main.a320a9c6.js.map"
   },
   "entrypoints": [
     "static/css/main.335029ef.css",
-    "static/js/main.c608e80a.js"
+    "static/js/main.a320a9c6.js"
   ]
 }
