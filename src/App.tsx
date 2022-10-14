@@ -29,8 +29,8 @@ function App() {
 
   // const baseURL =
   //   process.env.NODE_ENV === 'development' ? '/' : process.env.PUBLIC_URL
-  console.log(process.env.PUBLIC_URL)
-  alert(process.env.PUBLIC_URL)
+  // console.log(process.env.PUBLIC_URL)
+  // alert(process.env.PUBLIC_URL)
 
   return (
     <Router>
