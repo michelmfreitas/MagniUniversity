@@ -28,7 +28,7 @@ function App() {
   }, [])
 
   return (
-    <Router basename="magniuniversity.github.io/">
+    <Router>
       <Routes>
         <Route path="/" element={<Dashboard />} />
         <Route path="/cursos" element={<Cursos />} />
@@ -44,7 +44,7 @@ function App() {
             />
           )
         })}
-        {/* <Route path="*" element={<h1>Error 404</h1>} /> */}
+        <Route path="*" element={<h1>Error 404</h1>} />
       </Routes>
     </Router>
   )
