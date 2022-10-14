@@ -26,14 +26,9 @@ function App() {
 
     setCoursesRoutes(arr)
   }, [])
-  console.log('public url: ', process.env.REACT_APP_PUBLIC_URL)
 
-  const url =
-    process.env.REACT_APP_NODE_ENV === 'development'
-      ? '/'
-      : process.env.REACT_APP_PUBLIC_URL
   return (
-    <Router basename={url}>
+    <Router basename="https://michelmfreitas.github.io/magniuniversity.github.io/">
       <Routes>
         <Route path="/" element={<Dashboard />} />
         <Route path="/cursos" element={<Cursos />} />
