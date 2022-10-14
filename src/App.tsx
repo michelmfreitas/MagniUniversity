@@ -27,8 +27,13 @@ function App() {
     setCoursesRoutes(arr)
   }, [])
   console.log('public url: ', process.env.REACT_APP_PUBLIC_URL)
+
+  const url =
+    process.env.REACT_APP_NODE_ENV === 'development'
+      ? '/'
+      : process.env.REACT_APP_PUBLIC_URL
   return (
-    <Router basename={process.env.REACT_APP_PUBLIC_URL}>
+    <Router basename={url}>
       <Routes>
         <Route path="/" element={<Dashboard />} />
         <Route path="/cursos" element={<Cursos />} />
