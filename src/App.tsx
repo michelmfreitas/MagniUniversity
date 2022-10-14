@@ -26,12 +26,14 @@ function App() {
 
     setCoursesRoutes(arr)
   }, [])
+
   const baseURL =
     process.env.NODE_ENV === 'development' ? '/' : process.env.PUBLIC_URL
   console.log(baseURL)
   alert(baseURL)
+
   return (
-    <Router>
+    <Router basename={baseURL}>
       <Routes>
         <Route path="/" element={<Dashboard />} />
         <Route path="/cursos" element={<Cursos />} />
