@@ -2,7 +2,7 @@
   "name": "magniUniversity",
   "version": "0.1.0",
   "private": true,
-  "homepage": "magniuniversity.github.io/",
+  "homepage": "https://michelmfreitas.github.io/magniuniversity.github.io/",
   "dependencies": {
     "@chakra-ui/react": "^2.3.5",
     "@emotion/react": "^11.10.4",
