@@ -137,7 +137,6 @@ export default function Dashboard() {
                 </Thead>
                 <Tbody>
                   {professores.map((item: any) => {
-                    console.log(item)
                     return (
                       <Tr key={item.id}>
                         <Td>
@@ -175,7 +174,6 @@ export default function Dashboard() {
                 </Thead>
                 <Tbody>
                   {alunos.map((item: any) => {
-                    console.log(item)
                     return (
                       <Tr key={item.id}>
                         <Td>

@@ -26,9 +26,12 @@ function App() {
 
     setCoursesRoutes(arr)
   }, [])
-
+  const baseURL =
+    process.env.NODE_ENV === 'development' ? '/' : process.env.PUBLIC_URL
+  console.log(baseURL)
+  alert(baseURL)
   return (
-    <Router basename="magniuniversity.github.io">
+    <Router>
       <Routes>
         <Route path="/" element={<Dashboard />} />
         <Route path="/cursos" element={<Cursos />} />
