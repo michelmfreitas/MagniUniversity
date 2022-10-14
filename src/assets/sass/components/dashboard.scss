@@ -1,0 +1,27 @@
+.dashboard{
+    .dashboard-grid{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        &__item{
+            h2{
+                margin-bottom: 20px;
+            }
+            padding: 30px;
+            box-shadow: 0 4px 4px 4px rgba(0,0,0,0.15);
+            border-radius: 10px;
+            background-color: $gray_100;
+            .table{
+                tbody{
+                    tr{
+                        td{
+                            &:last-child{
+                                width: 30%;
+                                text-align: left;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

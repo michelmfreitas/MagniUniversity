@@ -8,7 +8,8 @@ export default function Sidebar() {
           Magni<span>University</span>
         </Heading>
         <VStack as="nav" align="left">
-          <a href="/">Cursos</a>
+          <a href="/">Dashboard</a>
+          <a href="/cursos">Cursos</a>
           <a href="/disciplinas">Disciplinas</a>
           <a href="/professores">Professores</a>
           <a href="/alunos">Alunos</a>

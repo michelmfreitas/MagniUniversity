@@ -1,26 +1,26 @@
 export const cursos = [
   {
     id: '1',
-    name: 'engenharia',
+    name: 'Engenharia',
     slug: 'engenharia',
   },
 
   {
     id: '2',
-    name: 'arquitetura',
+    name: 'Arquitetura',
     slug: 'arquitetura',
   },
 
   {
     id: '3',
-    name: 'fisica',
-    slug: 'fisica',
+    name: 'Medicina',
+    slug: 'medicina',
   },
 
   {
     id: '4',
-    name: 'biologia',
-    slug: 'biologia',
+    name: 'Mecatrônica',
+    slug: 'mecatronica',
   },
 ]
 export default cursos

@@ -6,6 +6,7 @@ import { cursos as CoursesData } from './dummyData/cursos'
 import Alunos from './pages/Alunos'
 import Cursos from './pages/Cursos'
 import CursosDetails from './pages/Cursos/cursos'
+import Dashboard from './pages/Dashboard'
 import Disciplinas from './pages/Disciplinas'
 import Professores from './pages/Professores'
 import { CourseProps } from './types/courses'
@@ -29,7 +30,8 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Cursos />} />
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/cursos" element={<Cursos />} />
         <Route path="/alunos" element={<Alunos />} />
         <Route path="/professores" element={<Professores />} />
         <Route path="/disciplinas" element={<Disciplinas />} />
