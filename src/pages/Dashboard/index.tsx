@@ -67,6 +67,9 @@ export default function Dashboard() {
 
   return (
     <Layout title="Dashboard">
+      <small>
+        You are running this application in <b>{process.env.NODE_ENV}</b> mode.
+      </small>
       <div id="main">
         <Flex justifyContent="space-between" alignItems="center" mb="50px">
           <Heading fontSize="32px">Dashboard</Heading>
