@@ -69,6 +69,8 @@ export default function Dashboard() {
     <Layout title="Dashboard">
       <small>
         You are running this application in <b>{process.env.NODE_ENV}</b> mode.
+        <br />
+        The base URL is <b>{process.env.PUBLIC_URL}</b>
       </small>
       <div id="main">
         <Flex justifyContent="space-between" alignItems="center" mb="50px">
