@@ -28,7 +28,7 @@ function App() {
   }, [])
 
   return (
-    <Router basename="/">
+    <Router>
       <Routes>
         <Route path="/" element={<Dashboard />} />
         <Route path="/cursos" element={<Cursos />} />
