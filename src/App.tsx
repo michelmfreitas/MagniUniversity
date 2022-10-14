@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 
 import './assets/sass/global.scss'
 import { cursos as CoursesData } from './dummyData/cursos'
@@ -28,7 +28,7 @@ function App() {
   }, [])
 
   return (
-    <Router>
+    <Router basename="/">
       <Routes>
         <Route path="/" element={<Dashboard />} />
         <Route path="/cursos" element={<Cursos />} />
