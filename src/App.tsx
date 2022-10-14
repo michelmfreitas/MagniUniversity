@@ -26,7 +26,7 @@ function App() {
 
     setCoursesRoutes(arr)
   }, [])
-
+  console.log('public url: ', process.env.PUBLIC_URL)
   return (
     <Router basename="/">
       <Routes>
