@@ -28,7 +28,7 @@ function App() {
   }, [])
 
   return (
-    <Router basename="/magniuniversity.github.io">
+    <Router basename="/">
       <Routes>
         <Route path="/" element={<Dashboard />} />
         <Route path="/cursos" element={<Cursos />} />
