@@ -197,13 +197,14 @@ export default function Cursos() {
                   return (
                     <Tr key={item.id}>
                       <Td>
-                        <Link to={`#/cursos/${item.slug}`}>{item.name}</Link>
-                        <Link to={`#/${item.slug}`}>{item.name}</Link>
-                        <Link to={`#/${item.slug}`}>{item.name}</Link>
+                        <Link to={`/${item.slug}`}>{item.name}</Link>
                         <a href={`#/cursos/${item.slug}`}>{item.name}</a>
                       </Td>
                       <Td>
-                        <a href="#" onClick={() => openModal('', item)}>
+                        <a
+                          href="javascript:void(0)"
+                          onClick={() => openModal('', item)}
+                        >
                           editar
                         </a>
                         <a href="#" onClick={() => openModal('delete', item)}>
