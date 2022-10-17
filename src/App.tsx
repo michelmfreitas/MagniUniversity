@@ -11,6 +11,11 @@ import Disciplinas from './pages/Disciplinas'
 import Professores from './pages/Professores'
 import { CourseProps } from './types/courses'
 
+const url =
+  process.env.NODE_ENV === 'development'
+    ? '/'
+    : 'https://michelmfreitas.github.io/magniuniversity.github.io/'
+
 function App() {
   const [coursesRoutes, setCoursesRoutes] = useState([])
   useEffect(() => {
@@ -35,16 +40,16 @@ function App() {
   return (
     <Router basename="/">
       <Routes>
-        <Route path="/" element={<Dashboard />} />
-        <Route path="#/cursos" element={<Cursos />} />
-        <Route path="#/alunos" element={<Alunos />} />
-        <Route path="/professores" element={<Professores />} />
-        <Route path="/disciplinas" element={<Disciplinas />} />
+        <Route path={`${url}`} element={<Dashboard />} />
+        <Route path={`${url}#/cursos`} element={<Cursos />} />
+        <Route path={`${url}#/alunos`} element={<Alunos />} />
+        <Route path={`${url}#/professores`} element={<Professores />} />
+        <Route path={`${url}#/disciplinas`} element={<Disciplinas />} />
         {coursesRoutes.map((item: CourseProps) => {
           return (
             <Route
               key={item.id}
-              path={`/cursos/${item.slug}`}
+              path={`${url}/cursos/${item.slug}`}
               element={<CursosDetails course={item} />}
             />
           )
