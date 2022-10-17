@@ -33,7 +33,7 @@ function App() {
   // alert(process.env.PUBLIC_URL)
 
   return (
-    <Router basename="/">
+    <Router basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path="/" element={<Dashboard />} />
         <Route path="/cursos" element={<Cursos />} />
