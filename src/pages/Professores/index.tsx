@@ -220,10 +220,16 @@ export default function Professores() {
                         <Moment format="DD/MM/YYYY">{item.birthday}</Moment>
                       </Td>
                       <Td>
-                        <a href="#" onClick={() => openModal('', item)}>
+                        <a
+                          href="javascript:void(0)"
+                          onClick={() => openModal('', item)}
+                        >
                           editar
                         </a>
-                        <a href="#" onClick={() => openModal('delete', item)}>
+                        <a
+                          href="javascript:void(0)"
+                          onClick={() => openModal('delete', item)}
+                        >
                           apagar
                         </a>
                       </Td>

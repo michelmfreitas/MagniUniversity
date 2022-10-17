@@ -12,7 +12,6 @@ import {
   Text,
   Tr,
 } from '@chakra-ui/react'
-import { Link } from 'react-router-dom'
 import Layout from '../Layout'
 import { ReactNode, useEffect, useState } from 'react'
 import Modal from 'react-modal'
@@ -197,7 +196,6 @@ export default function Cursos() {
                   return (
                     <Tr key={item.id}>
                       <Td>
-                        <Link to={`/${item.slug}`}>{item.name}</Link>
                         <a href={`#/cursos/${item.slug}`}>{item.name}</a>
                       </Td>
                       <Td>
@@ -207,7 +205,10 @@ export default function Cursos() {
                         >
                           editar
                         </a>
-                        <a href="#" onClick={() => openModal('delete', item)}>
+                        <a
+                          href="javascript:void(0)"
+                          onClick={() => openModal('delete', item)}
+                        >
                           apagar
                         </a>
                       </Td>

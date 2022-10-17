@@ -389,10 +389,16 @@ export default function CursosDetails({ course }: any) {
                         </a>
                       </Td>
                       <Td>
-                        <a href="#" onClick={() => openModal('', item)}>
+                        <a
+                          href="javascript:void(0)"
+                          onClick={() => openModal('', item)}
+                        >
                           editar
                         </a>
-                        <a href="#" onClick={() => openModal('delete', item)}>
+                        <a
+                          href="javascript:void(0)"
+                          onClick={() => openModal('delete', item)}
+                        >
                           apagar
                         </a>
                       </Td>

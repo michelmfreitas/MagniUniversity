@@ -235,10 +235,16 @@ export default function Disciplinas() {
                       <Td>{item.name}</Td>
                       <Td>{item.professor[0].name}</Td>
                       <Td>
-                        <a href="#" onClick={() => openModal('', item)}>
+                        <a
+                          href="javascript:void(0)"
+                          onClick={() => openModal('', item)}
+                        >
                           editar
                         </a>
-                        <a href="#" onClick={() => openModal('delete', item)}>
+                        <a
+                          href="javascript:void(0)"
+                          onClick={() => openModal('delete', item)}
+                        >
                           apagar
                         </a>
                       </Td>
