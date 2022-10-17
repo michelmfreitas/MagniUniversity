@@ -34,9 +34,6 @@ const customStyles = {
   },
 }
 
-const baseURL =
-  process.env.NODE_ENV === 'development' ? '/' : process.env.PUBLIC_URL
-
 export default function Cursos() {
   const [modalIsOpen, setIsOpen] = useState(false)
   const [courses, setCourses] = useState<Array<CourseProps>>([])
