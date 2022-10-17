@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Routes, Route, HashRouter } from 'react-router-dom'
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 
 import './assets/sass/global.scss'
 import { cursos as CoursesData } from './dummyData/cursos'
@@ -10,11 +10,6 @@ import Dashboard from './pages/Dashboard'
 import Disciplinas from './pages/Disciplinas'
 import Professores from './pages/Professores'
 import { CourseProps } from './types/courses'
-
-const url =
-  process.env.NODE_ENV === 'development'
-    ? '/'
-    : 'https://michelmfreitas.github.io/magniuniversity.github.io/'
 
 function App() {
   const [coursesRoutes, setCoursesRoutes] = useState([])
@@ -31,7 +26,6 @@ function App() {
 
     setCoursesRoutes(arr)
   }, [])
-  console.log(url)
 
   // const baseURL =
   //   process.env.NODE_ENV === 'development' ? '/' : process.env.PUBLIC_URL
@@ -39,28 +33,25 @@ function App() {
   // alert(process.env.PUBLIC_URL)
 
   return (
-    <HashRouter basename="/">
+    <Router basename="/">
       <Routes>
-        <Route path={`/`} element={<Dashboard />} />
-        <Route
-          path={`https://michelmfreitas.github.io/magniuniversity.github.io/#/cursos`}
-          element={<Cursos />}
-        />
-        <Route path={`${url}#/alunos`} element={<Alunos />} />
-        <Route path={`${url}#/professores`} element={<Professores />} />
-        <Route path={`${url}#/disciplinas`} element={<Disciplinas />} />
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/cursos" element={<Cursos />} />
+        <Route path="/alunos" element={<Alunos />} />
+        <Route path="/professores" element={<Professores />} />
+        <Route path="/disciplinas" element={<Disciplinas />} />
         {coursesRoutes.map((item: CourseProps) => {
           return (
             <Route
               key={item.id}
-              path={`${url}/cursos/${item.slug}`}
+              path={`/cursos/${item.slug}`}
               element={<CursosDetails course={item} />}
             />
           )
         })}
         <Route path="*" element={<h1>Error 404</h1>} />
       </Routes>
-    </HashRouter>
+    </Router>
   )
 }
 

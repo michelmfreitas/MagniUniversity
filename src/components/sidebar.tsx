@@ -9,10 +9,10 @@ export default function Sidebar() {
         </Heading>
         <VStack as="nav" align="left">
           <a href="/">Dashboard</a>
-          <a href="/cursos">Cursos</a>
-          <a href="/disciplinas">Disciplinas</a>
-          <a href="/professores">Professores</a>
-          <a href="/alunos">Alunos</a>
+          <a href="#/cursos">Cursos</a>
+          <a href="#/disciplinas">Disciplinas</a>
+          <a href="#/professores">Professores</a>
+          <a href="#/alunos">Alunos</a>
         </VStack>
       </Box>
     </aside>
