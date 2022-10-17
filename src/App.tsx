@@ -40,7 +40,7 @@ function App() {
   return (
     <Router basename="/">
       <Routes>
-        <Route path={`${url}`} element={<Dashboard />} />
+        <Route path={`/`} element={<Dashboard />} />
         <Route path={`${url}#/cursos`} element={<Cursos />} />
         <Route path={`${url}#/alunos`} element={<Alunos />} />
         <Route path={`${url}#/professores`} element={<Professores />} />
