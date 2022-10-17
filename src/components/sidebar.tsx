@@ -1,5 +1,9 @@
 import { Box, Heading, VStack } from '@chakra-ui/react'
 
+const baseURL =
+  process.env.NODE_ENV === 'development' ? '/' : process.env.PUBLIC_URL
+console.log(process.env.PUBLIC_URL)
+
 export default function Sidebar() {
   return (
     <aside>
@@ -8,8 +12,8 @@ export default function Sidebar() {
           Magni<span>University</span>
         </Heading>
         <VStack as="nav" align="left">
-          <a href="/">Dashboard</a>
-          <a href="#/cursos">Cursos</a>
+          <a href={baseURL}>Dashboard</a>
+          <a href={`${baseURL}/#/cursos`}>Cursos</a>
           <a href="#/disciplinas">Disciplinas</a>
           <a href="#/professores">Professores</a>
           <a href="#/alunos">Alunos</a>
