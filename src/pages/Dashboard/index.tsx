@@ -25,10 +25,9 @@ import { ProfessoresProps } from '../../types/professores'
 import Moment from 'react-moment'
 import { AlunosProps } from '../../types/alunos'
 
-const url =
-  process.env.NODE_ENV === 'development'
-    ? '/'
-    : 'https://michelmfreitas.github.io/magniuniversity.github.io/'
+const baseURL =
+  process.env.NODE_ENV === 'development' ? '/' : process.env.PUBLIC_URL
+// console.log(process.env.PUBLIC_URL)
 
 export default function Dashboard() {
   const [alunos, setAlunos] = useState<Array<AlunosProps>>([])
@@ -72,11 +71,6 @@ export default function Dashboard() {
 
   return (
     <Layout title="Dashboard">
-      <small>
-        You are running this application in <b>{process.env.NODE_ENV}</b> mode.
-        <br />
-        The base URL is <b>{url}</b>
-      </small>
       <div id="main">
         <Flex justifyContent="space-between" alignItems="center" mb="50px">
           <Heading fontSize="32px">Dashboard</Heading>
@@ -98,7 +92,9 @@ export default function Dashboard() {
                       <Tr key={item.id}>
                         <Td w="50%">
                           <Text>
-                            <a href={`/cursos/${item.slug}`}>{item.name}</a>
+                            <a href={`${baseURL}/cursos/${item.slug}`}>
+                              {item.name}
+                            </a>
                           </Text>
                         </Td>
                         <Td w="50%">

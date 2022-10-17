@@ -2,7 +2,7 @@ import { Box, Heading, VStack } from '@chakra-ui/react'
 
 const baseURL =
   process.env.NODE_ENV === 'development' ? '/' : process.env.PUBLIC_URL
-console.log(process.env.PUBLIC_URL)
+// console.log(process.env.PUBLIC_URL)
 
 export default function Sidebar() {
   return (

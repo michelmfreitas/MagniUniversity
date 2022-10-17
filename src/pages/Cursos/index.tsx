@@ -34,6 +34,9 @@ const customStyles = {
   },
 }
 
+const baseURL =
+  process.env.NODE_ENV === 'development' ? '/' : process.env.PUBLIC_URL
+
 export default function Cursos() {
   const [modalIsOpen, setIsOpen] = useState(false)
   const [courses, setCourses] = useState<Array<CourseProps>>([])
@@ -197,7 +200,9 @@ export default function Cursos() {
                   return (
                     <Tr key={item.id}>
                       <Td>
-                        <Link to={`/cursos/${item.slug}`}>{item.name}</Link>
+                        <Link to={`${baseURL}/cursos/${item.slug}`}>
+                          {item.name}
+                        </Link>
                       </Td>
                       <Td>
                         <a href="#" onClick={() => openModal('', item)}>
