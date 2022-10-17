@@ -92,8 +92,7 @@ export default function Dashboard() {
                       <Tr key={item.id}>
                         <Td w="50%">
                           <Text>
-                            <a href={`/${item.slug}`}>{item.name}</a>
-                            <a href={`#/${item.slug}`}>{item.name}</a>
+                            <a href={`#/cursos/${item.slug}`}>{item.name}</a>
                           </Text>
                         </Td>
                         <Td w="50%">
