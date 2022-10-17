@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { HashRouter as Router, Routes, Route } from 'react-router-dom'
+import { Routes, Route, HashRouter } from 'react-router-dom'
 
 import './assets/sass/global.scss'
 import { cursos as CoursesData } from './dummyData/cursos'
@@ -39,7 +39,7 @@ function App() {
   // alert(process.env.PUBLIC_URL)
 
   return (
-    <Router basename="/">
+    <HashRouter basename="/">
       <Routes>
         <Route path={`/`} element={<Dashboard />} />
         <Route
@@ -60,7 +60,7 @@ function App() {
         })}
         <Route path="*" element={<h1>Error 404</h1>} />
       </Routes>
-    </Router>
+    </HashRouter>
   )
 }
 
