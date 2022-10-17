@@ -33,11 +33,11 @@ function App() {
   // alert(process.env.PUBLIC_URL)
 
   return (
-    <Router basename="/">
+    <Router basename="/magniuniversity.github.io">
       <Routes>
         <Route path="/" element={<Dashboard />} />
-        <Route path="/cursos" element={<Cursos />} />
-        <Route path="/alunos" element={<Alunos />} />
+        <Route path="#/cursos" element={<Cursos />} />
+        <Route path="#/alunos" element={<Alunos />} />
         <Route path="/professores" element={<Professores />} />
         <Route path="/disciplinas" element={<Disciplinas />} />
         {coursesRoutes.map((item: CourseProps) => {
