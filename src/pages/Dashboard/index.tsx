@@ -25,6 +25,11 @@ import { ProfessoresProps } from '../../types/professores'
 import Moment from 'react-moment'
 import { AlunosProps } from '../../types/alunos'
 
+const url =
+  process.env.NODE_ENV === 'development'
+    ? '/'
+    : 'https://michelmfreitas.github.io/magniuniversity.github.io/'
+
 export default function Dashboard() {
   const [alunos, setAlunos] = useState<Array<AlunosProps>>([])
   const [courses, setCourses] = useState<Array<CourseProps>>([])
@@ -70,7 +75,7 @@ export default function Dashboard() {
       <small>
         You are running this application in <b>{process.env.NODE_ENV}</b> mode.
         <br />
-        The base URL is <b>{process.env.PUBLIC_URL}</b>
+        The base URL is <b>{url}</b>
       </small>
       <div id="main">
         <Flex justifyContent="space-between" alignItems="center" mb="50px">
