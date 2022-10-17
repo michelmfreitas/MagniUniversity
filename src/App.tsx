@@ -31,6 +31,7 @@ function App() {
 
     setCoursesRoutes(arr)
   }, [])
+  console.log(url)
 
   // const baseURL =
   //   process.env.NODE_ENV === 'development' ? '/' : process.env.PUBLIC_URL
@@ -41,7 +42,10 @@ function App() {
     <Router basename="/">
       <Routes>
         <Route path={`/`} element={<Dashboard />} />
-        <Route path={`${url}#/cursos`} element={<Cursos />} />
+        <Route
+          path={`https://michelmfreitas.github.io/magniuniversity.github.io/#/cursos`}
+          element={<Cursos />}
+        />
         <Route path={`${url}#/alunos`} element={<Alunos />} />
         <Route path={`${url}#/professores`} element={<Professores />} />
         <Route path={`${url}#/disciplinas`} element={<Disciplinas />} />
